@@ -151,11 +151,11 @@ int StFarm::Initialize(double report){
     report_seconds = report;
     
     // use linux epoll.
-    if(st_set_eventsys(ST_EVENTSYS_ALT) == -1){
-        ret = ERROR_ST_INITIALIZE;
-        Error("st_set_eventsys use linux epoll failed. ret=%d", ret);
-        return ret;
-    }
+    // if(st_set_eventsys(ST_EVENTSYS_ALT) == -1){
+    //     ret = ERROR_ST_INITIALIZE;
+    //     Error("st_set_eventsys use linux epoll failed. ret=%d", ret);
+    //     return ret;
+    // }
     
     if(st_init() != 0){
         ret = ERROR_ST_INITIALIZE;
